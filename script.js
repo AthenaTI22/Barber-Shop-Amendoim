@@ -61,4 +61,33 @@ document.addEventListener("DOMContentLoaded", function () {
       setTimeout(() => aviso.remove(), 500);
     }, 3000);
   }
+
+  // --- Modo Claro/Escuro ---
+  const toggleBtn = document.getElementById("toggle-theme");
+  const body = document.body;
+
+  function aplicarTema() {
+    const tema = localStorage.getItem("tema");
+    if (tema === "claro") {
+      body.classList.add("light-mode");
+      toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
+    } else {
+      body.classList.remove("light-mode");
+      toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
+    }
+  }
+
+  aplicarTema();
+
+  toggleBtn.addEventListener("click", () => {
+    if (body.classList.contains("light-mode")) {
+      body.classList.remove("light-mode");
+      localStorage.setItem("tema", "escuro");
+      toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
+    } else {
+      body.classList.add("light-mode");
+      localStorage.setItem("tema", "claro");
+      toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
+    }
+  });
 });
