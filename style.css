@@ -294,3 +294,14 @@ label {
   font-weight: 600;
   line-height: 1.6;
 }
+
+#localizacao {
+  padding: 2rem;
+  margin-top: 2rem;
+  background-color: rgba(0, 0, 0, 0.6); /* escuro no modo padrão */
+  border-radius: 8px;
+}
+
+body.light-mode #localizacao {
+  background-color: rgba(255, 255, 255, 0.6); /* claro no modo claro */
+}
