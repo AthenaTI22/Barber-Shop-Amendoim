@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const campos = formulario.querySelectorAll("input, textarea, select, button");
   const contatoSection = document.getElementById("contato");
 
-  window.agendarHorario = function () {
+  window.agendarServico = function () {
     contatoSection.scrollIntoView({ behavior: "smooth" });
   };
 

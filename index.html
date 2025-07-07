@@ -1,65 +1,116 @@
-<!DOCTYPE html><html lang="pt-br">
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Barbearia Estilo Fino</title>
+  <title>Barber Shop Amendoim</title>
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
 </head>
 <body>
   <header>
     <nav>
-      <h1>Barbearia Estilo Fino</h1>
+      <h1>Barber Shop Amendoim</h1>
       <ul>
         <li><a href="#home">Início</a></li>
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#portfolio">Portfólio</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
     </nav>
-  </header>  <section id="home">
-    <h2>Bem-vindo à Barbearia Estilo Fino</h2>
+  </header>
+
+  <section id="home">
+    <h2>Bem-vindo à Barber Shop Amendoim</h2>
     <p>O seu estilo começa aqui. Corte, barba e cuidado de verdade.</p>
-    <button onclick="agendarHorario()">Agendar horário</button>
-  </section>  <section id="sobre">
+    <button onclick="agendarServico()">Agendar Serviço </button>
+  </section>
+
+  <section id="sobre">
     <h2>Sobre Nós</h2>
     <p>Somos uma barbearia tradicional com um toque moderno. Atendimento de qualidade e ambiente acolhedor.</p>
-    <img src="img/barbearia.jpg" alt="Foto da barbearia" style="width: 100%; max-width: 600px; border-radius: 8px; margin-top: 1rem;">
-    <img src="img/equipe.jpg" alt="Equipe da barbearia" class="imagem-extra">
-  </section>  <section id="servicos">
+    <img src="img/Dono da Barbearia.jpg" width="300" height="300" alt="Equipe da barbearia" class="imagem-redonda">
+    <img src="img/Logo da Barber.jpg" alt="Foto da barbearia" style="width: 100%; max-width: 300px; border-radius: 8px; margin-top: 1rem;">
+  </section>
+
+  <section id="servicos">
     <h2>Serviços</h2>
     <ul>
-      <li>Corte Masculino - R$ 30,00</li>
       <li>Barba - R$ 20,00</li>
       <li>Combo Corte + Barba - R$ 45,00</li>
       <li>Sobrancelha - R$ 10,00</li>
+      <li>Degradê + Navalha - R$ 35,00</li>
+      <li>Hidratação de Barba - R$ 25,00</li>
+      <li>Platinado - R$ 60,00</li>
     </ul>
-  </section>  <section id="contato">
+  </section>
+
+  <section id="portfolio">
+    <h2>Nossos Trabalhos</h2>
+    <div class="galeria">
+      <img src="img/Corte degradê com navalha.png" width="200" height="200" alt="Corte degradê com navalha">
+      <img src="img/1000316484.jpg" width="200" height="200" alt="Barba completa com hidratação">
+      <img src="img/Estrela cadente.jpg" width="200" height="200" alt="Estrela Cadente">
+      <img src="img/Nevou.jpg" width="200" height="200" alt="Nevou">
+      <img src="img/Risco.jpg" width="200" height="200" alt="Risco">
+      <img src="img/The Flash.jpg" width="200" height="200" alt="The Flash">
+      <img src="img/Monster.jpg" width="200" height="200" alt="Monster">
+      <img src="img/Risco Sobrancelha.jpg" width="200" height="200" alt="Risco sobrancelha">
+      <img src="img/Barba Perfeita.jpg" width="200" height="200" alt="Barba Perfeita">
+      <img src="img/Barba desenhada.png" width="200" height="200" alt="Barba Desenhada">
+
+    </div>
+  </section>
+
+  <section id="horarios">
+    <h2>Horário de Funcionamento</h2>
+    <ul>
+      <li>Terça a Sábado: 09h às 19:30h</li>
+      <li>Domingo: 09h às 13h</li>
+    </ul>
+  </section>
+</section>
+
+  <section id="contato">
     <h2>Contato</h2>
     <form id="formulario">
       <label for="nome">Nome:</label>
-      <input type="text" id="nome" name="nome" required><label for="email">Email:</label>
-  <input type="email" id="email" name="email" required>
+      <input type="text" id="nome" name="nome" required>
 
-  <label for="telefone">Telefone:</label>
-  <input type="tel" id="telefone" name="telefone" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
 
-  <label for="servico">Serviço desejado:</label>
-  <select id="servico" name="servico" required>
-    <option value="">Selecione</option>
-    <option value="corte">Corte</option>
-    <option value="barba">Barba</option>
-    <option value="combo">Combo Corte + Barba</option>
-  </select>
+      <label for="telefone">Telefone:</label>
+      <input type="tel" id="telefone" name="telefone" required>
 
-  <label for="mensagem">Mensagem:</label>
-  <textarea id="mensagem" name="mensagem" maxlength="200" required></textarea>
+      <label for="servico">Serviço desejado:</label>
+      <select id="servico" name="servico" required>
+        <option value="">Selecione</option>
+        <option value="barba">Barba</option>
+        <option value="combo">Combo Corte + Barba</option>
+        <option value="degrade">Degradê + Navalha</option>
+        <option value="hidratacao">Hidratação de Barba</option>
+        <option value="platinado">Platinado</option>
+        <option value="sobrancelha">Sobrancelha</option>
+      </select>
 
-  <button type="submit">Enviar</button>
-</form>
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" maxlength="200" required></textarea>
 
-  </section>  <footer>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
     <p>&copy; 2025 Barbearia Estilo Fino. Todos os direitos reservados.</p>
+    <p>
+      <a href="https://www.instagram.com/amendoimbarber" target="_blank" rel="noopener noreferrer" style="color: #f0f0f0; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
+        <i class="fab fa-instagram" style="font-size: 1.5rem; color: #E1306C;"></i>
+        @amendoimbarber
+      </a>
+    </p>
   </footer>
 </body>
 </html>
