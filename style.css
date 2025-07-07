@@ -305,3 +305,53 @@ label {
 body.light-mode #localizacao {
   background-color: rgba(255, 255, 255, 0.6); /* claro no modo claro */
 }
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  #home {
+    height: auto;
+    padding: 3rem 1rem;
+  }
+
+  .galeria {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .galeria img,
+  .imagem-redonda {
+    max-width: 90%;
+    width: auto;
+  }
+
+  section {
+    padding: 1.5rem 1rem;
+  }
+
+  input,
+  textarea,
+  select,
+  button {
+    font-size: 1rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  label,
+  p,
+  li {
+    font-size: 1.1rem;
+  }
+}
